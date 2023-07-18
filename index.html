@@ -1,1 +1,111 @@
-<h1>hello world!</h1>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <style>
+          body {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+          }
+          #left {
+            position: sticky;
+            top: 0;
+            width: 30%;
+            height: 100vh;
+            overflow: auto;
+            padding: 20px;
+            box-sizing: border-box;
+          }
+          #right {
+            width: 70%;
+            padding: 20px;
+            box-sizing: border-box;
+          }
+        </style>
+        <script>
+          $(document).ready(function() {
+            $(document).scroll(function() {
+              $('#right h2').each(function() {
+                var topDistance = $(this).offset().top - $(window).scrollTop();
+                var leftId = $(this).attr('id').replace('right', 'left');
+                if(topDistance >= 0 && topDistance <= 200) {
+                  $('#' + leftId).css('font-size', '2em');
+                } else {
+                  $('#' + leftId).css('font-size', '1em');
+                }
+              });
+            });
+          });
+        </script>
+    </head>
+    <body>
+        <div id="left">
+            <h2 id="leftHeading1"><a href="#rightHeading1">Heading 1</a></h2>
+            <h2 id="leftHeading2"><a href="#rightHeading2">Heading 2</a></h2>
+            <h2 id="leftHeading3"><a href="#rightHeading3">Heading 3</a></h2>
+            <h2 id="leftHeading4"><a href="#rightHeading4">Heading 4</a></h2>
+            <h2 id="leftHeading5"><a href="#rightHeading5">Heading 5</a></h2>
+            <h2 id="leftHeading6"><a href="#rightHeading6">Heading 6</a></h2>
+            <h2 id="leftHeading7"><a href="#rightHeading7">Heading 7</a></h2>
+            <h2 id="leftHeading8"><a href="#rightHeading8">Heading 8</a></h2>
+            <h2 id="leftHeading9"><a href="#rightHeading9">Heading 9</a></h2>
+            <h2 id="leftHeading10"><a href="#rightHeading10">Heading 10</a></h2>
+            <h2 id="leftHeading11"><a href="#rightHeading11">Heading 11</a></h2>
+            <h2 id="leftHeading12"><a href="#rightHeading12">Heading 12</a></h2>
+        </div>
+        <div id="right">
+            <h2 id="rightHeading1">Heading 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere dui sem, id mollis purus feugiat non.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere dui sem, id mollis purus feugiat non.</p>
+            <h2 id="rightHeading2">Heading 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere dui sem, id mollis purus feugiat non.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere dui sem, id mollis purus feugiat non.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere dui sem, id mollis purus feugiat non.</p>
+            <h2 id="rightHeading3">Heading 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere dui sem, id mollis purus feugiat non.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere dui sem, id mollis purus feugiat non.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere dui sem, id mollis purus feugiat non.</p>
+            <h2 id="rightHeading4">Heading 4</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere dui sem, id mollis purus feugiat non.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere dui sem, id mollis purus feugiat non.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere dui sem, id mollis purus feugiat non.</p>
+            <h2 id="rightHeading5">Heading 5</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere dui sem, id mollis purus feugiat non.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere dui sem, id mollis purus feugiat non.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere dui sem, id mollis purus feugiat non.</p>
+            <h2 id="rightHeading6">Heading 6</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere dui sem, id mollis purus feugiat non.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere dui sem, id mollis purus feugiat non.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere dui sem, id mollis purus feugiat non.</p>
+            <h2 id="rightHeading7">Heading 7</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere dui sem, id mollis purus feugiat non.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere dui sem, id mollis purus feugiat non.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere dui sem, id mollis purus feugiat non.</p>
+            <h2 id="rightHeading8">Heading 8</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere dui sem, id mollis purus feugiat non.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere dui sem, id mollis purus feugiat non.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere dui sem, id mollis purus feugiat non.</p>
+            <h2 id="rightHeading9">Heading 9</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere dui sem, id mollis purus feugiat non.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere dui sem, id mollis purus feugiat non.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere dui sem, id mollis purus feugiat non.</p>
+            <h2 id="rightHeading10">Heading 10</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere dui sem, id mollis purus feugiat non.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere dui sem, id mollis purus feugiat non.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere dui sem, id mollis purus feugiat non.</p>
+            <h2 id="rightHeading11">Heading 11</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere dui sem, id mollis purus feugiat non.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere dui sem, id mollis purus feugiat non.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere dui sem, id mollis purus feugiat non.</p>
+            <h2 id="rightHeading12">Heading 12</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere dui sem, id mollis purus feugiat non.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere dui sem, id mollis purus feugiat non.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere dui sem, id mollis purus feugiat non.</p>
+        
+            <!--add space at the end-->
+            <div style="height: 600px"></div>
+        </div>
+    </body>
+    </html>
